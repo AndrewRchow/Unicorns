@@ -1,0 +1,8 @@
+<div *ngIf="unicorn" class=unicornDetails>
+  <h2>{{unicorn.name | uppercase}} Details</h2>
+  <div><label>id: </label>{{unicorn.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)] = "unicorn.name" placeholder = "name"/>
+  </div>
+</div>

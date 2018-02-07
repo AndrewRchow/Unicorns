@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>
+    {{ title }}!
+  </h1>
+  <h2>My Unicorns</h2>
+<ul class="unicorns">
+  <li *ngFor="let unicorn of unicorns"
+  [class.selected]="unicorn === selectedUnicorn"
+    (click)="onSelect(unicorn)">
+    <span class="badge">{{unicorn.id}}</span>
+    {{unicorn.name}}
+  </li>
+</ul>
+
+<app-unicorn-detail [unicorn] = "selectedUnicorn"></app-unicorn-detail>
+
+
+
+ 
